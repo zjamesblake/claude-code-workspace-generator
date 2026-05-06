@@ -87,34 +87,35 @@ Listen for:
 
 Show the full plan before creating anything. Use a visual folder map like this:
 
+**The key principle: the root is YOU, not your job.** The root CLAUDE.md represents the person: their role, principles, preferences, how they work. Work areas (agency, side projects, personal) are folders underneath. This means if they change jobs, add side projects, or have personal areas, everything lives naturally under their identity.
+
 ```
 YOUR WORKSPACE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-your-workspace/
-├── CLAUDE.md                         ← THE MAP (always loaded)
-│   "I am [name]. I do [role].
-│    [Standards/principles].
+{name}-workspace/
+├── CLAUDE.md                         ← YOU (always loaded)
+│   "I am [name]. [Role/identity].
+│    [How I work. My standards. My preferences.]
 │    Routing: see folders below."
 │
-├── {workspace-1}/
-│   ├── CONTEXT.md                    ← [workspace-1] context (loaded when here)
+├── {work-area-1}/                    ← An area of your work
+│   ├── CONTEXT.md                    ← Loaded when you're working here
 │   ├── {sub-area}/
 │   └── {sub-area}/
 │
-├── {workspace-2}/
-│   ├── CONTEXT.md                    ← [workspace-2] context (loaded when here)
+├── {work-area-2}/                    ← Another area (could be personal, side project, etc.)
+│   ├── CONTEXT.md
 │   └── {sub-area}/
-│
-└── {workspace-3}/
     ├── CONTEXT.md                    �� [workspace-3] context (loaded when here)
     └── {sub-area}/
 ```
 
 Explain briefly:
-- "The CLAUDE.md at the top is your home base. It tells me where everything is and how you work."
-- "Each area has a CONTEXT.md that describes what happens there."
-- "When you work in a specific area, I only load what's relevant to that area. Everything else stays available but not active."
+- "The CLAUDE.md at the top is YOU. It tells me who you are, how you work, and where everything lives. This is always loaded, no matter what you're working on."
+- "Each folder is an area of your work or life. It has its own guide that tells me what happens there."
+- "When you work in a specific area, I only load what's relevant. Everything else stays available but not active."
+- "You can add areas anytime: more clients, personal projects, learning, whatever. It all lives under you."
 
 **Wait for approval before creating anything.**
 
@@ -138,13 +139,12 @@ Show the visual map one more time with confirmation:
 
 ```
 WORKSPACE READY
-━━━━━━━━━━━━━━━��━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  your-workspace/
-    CLAUDE.md                          ✓ Your map
-    {workspace-1}/CONTEXT.md           ✓ 
-    {workspace-2}/CONTEXT.md           ✓
-    {workspace-3}/CONTEXT.md           ✓
+  {name}-workspace/
+    CLAUDE.md                          ✓ You (always loaded)
+    {work-area-1}/CONTEXT.md           ✓
+    {work-area-2}/CONTEXT.md           ✓
 
 What to do next:
   1. Open your new workspace folder in VS Code

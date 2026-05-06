@@ -1,6 +1,10 @@
-# {{YOUR_NAME}} — Workspace Map
+# {{YOUR_NAME}}
 
 {{DESCRIPTION}}
+
+## About Me
+
+{{ROLE_AND_CONTEXT}}
 
 ## Workspaces
 
