@@ -29,9 +29,9 @@ Open the Claude Code panel (click the Claude icon in the sidebar, or use the key
 Claude will:
 - Install your skills (asks permission once to copy files)
 - Ask you about your work (5 minute conversation)
-- Create your personalized workspace
+- Transform this folder into your personalized workspace
 
-That's it. When it's done, open your new workspace folder in VS Code and start working.
+That's it. This folder IS your workspace now. You're already in it. Start working.
 
 ## Skills Included
 

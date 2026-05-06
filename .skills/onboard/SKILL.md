@@ -119,19 +119,17 @@ Explain briefly:
 
 **Wait for approval before creating anything.**
 
-#### 4b. Ask where to create the workspace
+#### 4b. Create the workspace (in place)
 
-> Where would you like your workspace? I'll create it on your Desktop by default, or you can tell me a different location.
-
-#### 4c. Create the workspace
+**This folder becomes the workspace.** Do not create a new folder elsewhere.
 
 **Order of operations:**
 
-1. Create the root workspace folder
-2. Create all sub-workspace folders
-3. Write the root CLAUDE.md (personalized from template)
-4. Write CONTEXT.md for each workspace
-5. Create any sub-folders identified in the interview
+1. Create all sub-workspace folders inside the current directory
+2. Write the root CLAUDE.md (personalized from template, replacing the generator CLAUDE.md)
+3. Write CONTEXT.md for each workspace
+4. Create any sub-folders identified in the interview
+5. Clean up generator files: delete `.skills/`, `.templates/`, `README.md`, `system-docs/`
 
 #### 4d. Present the completed structure
 
@@ -141,15 +139,15 @@ Show the visual map one more time with confirmation:
 WORKSPACE READY
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  {name}-workspace/
+  (this folder)
     CLAUDE.md                          ✓ You (always loaded)
     {work-area-1}/CONTEXT.md           ✓
     {work-area-2}/CONTEXT.md           ✓
 
 What to do next:
-  1. Open your new workspace folder in VS Code
-  2. Open the Claude Code panel
-  3. Try /new-workflow to turn one of your repeating processes into a skill
+  1. You're already in your workspace! Just start a new session.
+  2. Try /new-workflow to turn one of your repeating processes into a skill
+  3. Tip: you can rename this folder to something personal (like "zak-workspace")
 
 Your workspace will grow as you use it. Every time you create
 something new or change something, the maps update automatically.
