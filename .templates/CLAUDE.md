@@ -26,10 +26,15 @@
 | Folders | kebab-case | client-work, content-ops |
 | Docs | snake_case.md | meeting_notes.md |
 
+## Rules
+
+**When the territory changes, the maps must be updated.** Any time a folder is created, renamed, moved, or deleted, or any time routing, structure, or scope changes, the CLAUDE.md and any affected CONTEXT.md files must be updated in the same action. Never leave the maps out of sync with reality. This is not optional.
+
+Claude maintains these maps. When you make a structural change, Claude will update the relevant documents automatically. You do not need to do this manually.
+
 ## Principles
 
 - **Architecture over prompting.** The structure of your workspace determines the quality of every output. Build the workspace, not better prompts.
-- **Living documentation.** Structural docs reflect current state at all times. If you change the territory, update the map. Outdated docs are worse than no docs.
 - **Right context at the right level.** Things always true about you go in the root CLAUDE.md. Things true about a project go in that project's CONTEXT.md. Things true about a specific workflow go in the skill. Never dump everything in one place.
 - **Repeatability over one-shot.** When you do something twice, make it a skill. Every repeatable process should be a single command.
 - **New mistakes only.** When something goes wrong, update the skill or context so it can never happen the same way again. The system gets smarter with every correction.
