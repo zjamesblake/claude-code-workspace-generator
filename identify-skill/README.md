@@ -6,22 +6,22 @@ Use it whenever you don't know what to automate next.
 
 ## Quick start
 
-You'll be running it in under a minute.
+The easiest way: open Claude Code in any folder, then paste this into the chat.
 
-1. **Copy and paste this into your terminal:**
+> Please install a new Claude Code skill for me. Download `https://raw.githubusercontent.com/zjamesblake/claude-code-workspace-generator/main/identify-skill/SKILL.md` and save it to `~/.claude/skills/identify-skill/SKILL.md`, creating the folder if it doesn't exist. Confirm when done.
 
-   ```bash
-   mkdir -p ~/.claude/skills/identify-skill && \
-   curl -fsSL https://raw.githubusercontent.com/zjamesblake/claude-code-workspace-generator/main/identify-skill/SKILL.md \
-     -o ~/.claude/skills/identify-skill/SKILL.md && \
-   echo "Installed. Open Claude Code and type /identify-skill"
-   ```
+Claude fetches the file and installs it. Open a new chat and type `/identify-skill` to begin the interview.
 
-2. **Open Claude Code** in any folder.
+The skill lives at the user level, so it works in every Claude Code session from now on, on every workspace.
 
-3. **Type `/identify-skill`** in the chat. The interview starts.
+### Prefer the terminal?
 
-That's it. The skill lives at the user level, so it works in every Claude Code session from now on, on every workspace.
+```bash
+mkdir -p ~/.claude/skills/identify-skill && \
+curl -fsSL https://raw.githubusercontent.com/zjamesblake/claude-code-workspace-generator/main/identify-skill/SKILL.md \
+  -o ~/.claude/skills/identify-skill/SKILL.md && \
+echo "Installed. Open Claude Code and type /identify-skill"
+```
 
 ## What it does
 
