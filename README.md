@@ -2,6 +2,8 @@
 
 Set up a structured AI workspace in 5 minutes. No coding required.
 
+> **Looking for `/identify-skill`?** That's a standalone skill in this repo, companion to the CC-02 video "Building Your First Skill." Install it in one message: see [identify-skill/](./identify-skill/).
+
 ## What This Does
 
 Creates a personalized workspace that organizes your work so Claude Code always knows what you're doing and what context to load. After setup, you'll have:
