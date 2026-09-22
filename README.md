@@ -1,11 +1,11 @@
 # Claude Code Workspace Generator
 
-**Workspace setup moved into the Team Build Kit.** The kit carries the interview this repository used to ship, plus the standards, hooks and practices a workspace needs, and it stays installed and current. Get it here: https://github.com/zjamesblake/team-build-kit
+**Workspace setup moved into the Team Build Kit.** The kit carries the interview this repository used to ship, plus the standards, hooks and practices a workspace needs, and it stays installed and current. Get it here: https://github.com/ecom-business-team/team-build-kit
 
 If you already use Claude Code, paste this one line into a terminal or into Claude Code:
 
 ```
-curl -fsSL https://raw.githubusercontent.com/zjamesblake/team-build-kit/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ecom-business-team/team-build-kit/main/install.sh | bash
 ```
 
 Then type **`/onboard`** to create your workspace.

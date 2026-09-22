@@ -9,7 +9,7 @@ Tell the user: *"Workspace setup moved into the Team Build Kit, which carries th
 ## Step 2: Install the kit's commands
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/zjamesblake/team-build-kit/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ecom-business-team/team-build-kit/main/install.sh | bash
 ```
 
 Confirm the ✅ line and its file count. If it printed ❌, nothing was installed; say so and stop.
@@ -20,7 +20,7 @@ Confirm the ✅ line and its file count. If it printed ❌, nothing was installe
 
 ## Step 4: Point at the kit
 
-After the interview's handoff card, say: *"Your workspace is ready. The kit's page has the rest — what the commands do and what to read first: https://github.com/zjamesblake/team-build-kit — and `/update-build-kit` keeps it current."*
+After the interview's handoff card, say: *"Your workspace is ready. The kit's page has the rest — what the commands do and what to read first: https://github.com/ecom-business-team/team-build-kit — and `/update-build-kit` keeps it current."*
 
 ---
 
