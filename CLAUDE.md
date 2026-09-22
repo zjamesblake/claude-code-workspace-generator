@@ -1,57 +1,37 @@
-# Claude Code Workspace Generator
+# Claude Code Workspace Generator — Signpost
 
-This folder will become your workspace. When the user says "get started" (or anything indicating they want to begin setup), follow these instructions.
+Workspace setup moved into the Team Build Kit. When the user says **"get started"** (or anything indicating they want to begin setup), follow these steps so they still end with a workspace.
 
-## Initialization Instructions
+## Step 1: Say where setup lives now
 
-### Step 1: Install Skills
+Tell the user: *"Workspace setup moved into the Team Build Kit, which carries this interview plus the standards and helpers a workspace needs. I'll install the kit's commands into your Claude Code now — it asks permission once — and then run the interview."*
 
-Copy the skills from this folder to the user's global skills directory. Run this command:
+## Step 2: Install the kit's commands
 
 ```bash
-cp -r "$(pwd)/.skills/onboard" ~/.claude/skills/onboard && cp -r "$(pwd)/.skills/new-workspace" ~/.claude/skills/new-workspace && cp -r "$(pwd)/.skills/new-workflow" ~/.claude/skills/new-workflow && echo "Skills installed successfully."
+curl -fsSL https://raw.githubusercontent.com/zjamesblake/team-build-kit/main/install.sh | bash
 ```
 
-Tell the user: "I'm installing three skills that will be available as commands in all your sessions. I just need your permission to copy some files."
+Confirm the ✅ line and its file count. If it printed ❌, nothing was installed; say so and stop.
 
-After the command runs, confirm: "Skills installed. You now have /onboard, /new-workspace, and /new-workflow available."
+## Step 3: Run the interview
 
-### Step 2: Run Onboard (in place)
+**Read the installed `~/.claude/skills/onboard/SKILL.md` and follow it.** It asks about the user's work in plain words, creates their workspace as a new folder (on the Desktop by default, since this folder is not the kit), installs the kit's workspace files into it, and writes their map and skills list. Do not build the workspace in this folder.
 
-Immediately after skills are installed, begin the /onboard process. Read the skill at `.skills/onboard/SKILL.md` and follow its instructions to interview the user and scaffold their workspace.
+## Step 4: Point at the kit
 
-**IMPORTANT: Build the workspace IN THIS FOLDER.** Do not create a new folder elsewhere. This folder transforms into their workspace. Create the sub-folders, write the CONTEXT.md files, and replace this CLAUDE.md with their personalized one.
-
-### Step 3: Clean Up
-
-After the workspace is scaffolded and the user has confirmed everything looks good:
-
-1. Replace THIS CLAUDE.md with the personalized workspace CLAUDE.md (the one generated from the interview)
-2. Delete the `.skills/` folder (skills are already installed globally)
-3. Delete the `.templates/` folder (template has been used)
-4. Delete `README.md` (no longer relevant, this is their workspace now)
-5. Delete `system-docs/` folder (internal docs, not needed by the user)
-
-The folder is now their workspace. Nothing left from the generator except the actual workspace files.
-
-### Step 4: Suggest renaming (optional)
-
-After cleanup, mention: "One last thing: you might want to rename this folder to something that makes sense for you (like your name or 'my-workspace'). You can do that in Finder. It won't break anything."
+After the interview's handoff card, say: *"Your workspace is ready. The kit's page has the rest — what the commands do and what to read first: https://github.com/zjamesblake/team-build-kit — and `/update-build-kit` keeps it current."*
 
 ---
 
 ## If the user asks questions before starting
 
-- **"What is this?"** — "This folder will become your AI workspace. It takes about 5 minutes to set up. I'll ask you some questions about your work, then organize this folder so Claude Code works much better for you. Type 'get started' when you're ready."
-- **"Is this safe?"** — "This creates folders and text files inside this folder. That's all. It also copies three small skill files to your Claude Code settings. No system changes, no hidden installs."
-- **"What if I mess up?"** — "Delete this folder and re-download it. 30 seconds. There's no risk."
-
----
+- **"What is this?"** — "This used to be the setup folder. Setup now lives in the Team Build Kit; I can install it and run the interview from here in about ten minutes. Type 'get started' when you're ready."
+- **"Is this safe?"** — "It copies skill files into your Claude Code settings and creates one new folder for your workspace. No system changes, no hidden installs."
+- **"What if I mess up?"** — "Delete the workspace folder and run `/onboard` again. There's no risk."
 
 ## Important Notes
 
 - Do NOT explain architecture, context windows, or technical concepts during setup.
-- Do NOT mention CLAUDE.md or CONTEXT.md by name until Phase 4 of onboard (when showing the plan). Before that, say "your map" and "project guides."
-- The workspace template is in `.templates/CLAUDE.md`. Personalize it during onboard.
 - Keep the tone warm and efficient.
-- **BUILD IN PLACE.** This folder becomes the workspace. Do not create a separate folder.
+- `identify-skill/` stays in this repository; it is the companion to the CC-02 video and installs on its own.
